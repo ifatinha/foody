@@ -95,7 +95,6 @@
     }
 
     li {
-        @include lora();
         text-align: center;
         width     : 100%;
     }
@@ -106,6 +105,7 @@
     }
 
     a {
+        @include apply-color(bs-white);
         display       : inline-block;
         font-size     : get-font-size(20);
         padding       : .5rem;

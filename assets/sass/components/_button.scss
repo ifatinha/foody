@@ -5,7 +5,7 @@
 
 .burger__button {
     @include flex(center, center, 8px);
-    @include apply-color(bs-dark);
+    @include apply-color(bs-slate-gray);
     background: transparent;
     border    : none;
     cursor    : pointer;
@@ -22,7 +22,7 @@
     }
 
     &-visually {
-        font-size     : get-font-size(16);
+        font-size     : get-font-size(18);
         font-weight   : 600;
         text-transform: uppercase;
     }

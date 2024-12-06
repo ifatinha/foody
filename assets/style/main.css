@@ -207,7 +207,7 @@ h6 {
   display: flex;
   gap: 8px;
   justify-content: center;
-  color: #111111;
+  color: #555555;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -234,7 +234,7 @@ h6 {
   opacity: 0.6;
 }
 .burger__button-visually {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -471,7 +471,6 @@ h6 {
   }
 }
 .menu__list li {
-  font-family: "Lora", serif;
   text-align: center;
   width: 100%;
 }
@@ -480,6 +479,7 @@ h6 {
   text-align: center;
 }
 .menu__list a {
+  color: #ffffff;
   display: inline-block;
   font-size: 1.25rem;
   padding: 0.5rem;
