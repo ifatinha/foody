@@ -74,14 +74,10 @@
 }
 
 // navbar modal
-.menu__container {
-    height: 100%;
-    width : 100%;
-}
 
 .menu__list {
     @include flex(center, center);
-    height    : 100%;
+    height    : 70%;
     overflow-y: auto;
     padding   : 1rem 0;
     width     : 100%;
