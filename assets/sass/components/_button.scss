@@ -5,6 +5,7 @@
 
 .burger__button {
     @include flex(center, center, 8px);
+    @include apply-color(bs-dark);
     background: transparent;
     border    : none;
     cursor    : pointer;
@@ -17,25 +18,17 @@
     }
 
     @include hover {
-        opacity: .5;
+        opacity: .6;
     }
 
     &-visually {
-        font-size  : get-font-size(16);
-        font-weight: 600;
-
-        // @include font-primary();
-        // clip     : rect(0, 0, 0, 0);
-        // font-size: get-font-size(14);
-        // height   : 1px;
-        // overflow : hidden;
-        // padding  : 0;
-        // position : absolute;
-        // width    : 1px;
+        font-size     : get-font-size(16);
+        font-weight   : 600;
+        text-transform: uppercase;
     }
 
     &-bars {
-        @include apply-bg-color("pure-black");
+        @include apply-bg-color(bs-slate-gray);
         display   : block;
         height    : 2px;
         position  : relative;
@@ -44,14 +37,14 @@
 
         &::after,
         &::before {
-            background-color: currentColor;
-            content         : "";
-            display         : block;
-            height          : 100%;
-            position        : absolute;
-            right           : 0;
-            transition      : all .25s linear;
-            width           : 100%;
+            @include apply-bg-color(bs-slate-gray);
+            content   : "";
+            display   : block;
+            height    : 100%;
+            position  : absolute;
+            right     : 0;
+            transition: all .25s linear;
+            width     : 100%;
         }
 
         &::after {

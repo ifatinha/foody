@@ -10,6 +10,8 @@
 
     @include devices-large-screens() {
         @include flex(center, space-between);
+        position: absolute;
+        z-index : 9999;
     }
 
     &__row {

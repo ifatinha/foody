@@ -1,44 +1,64 @@
 @use "../base/mixins"as *;
 @use "../base/colors"as *;
 @use "../base/typography"as *;
+@use "../base/mixins"as *;
 @use "../global/responsive"as *;
 
 .navbar {
 
+    @include flex(center, space-between);
+
     &__list {
+        display: none;
 
-        @include devices-small-screens {
-            background    : #e7e7e7;
-            flex-direction: column;
-            height        : 0px;
-            left          : 0;
-            overflow-y    : hidden;
-            position      : absolute;
-            transition    : .6s ease-in-out;
-            top           : 67px;
-            visibility    : hidden;
-            width         : 100%;
-            z-index       : 1000;
-        }
-
-        @include devices-large-screens {
-            @include flex(center, space-between);
+        @include devices-large-screens() {
+            @include flex(center, space-between, .4rem);
         }
 
         a {
-            display   : block;
-            padding   : .5rem;
-            transition: .5s ease-in-out;
+            @include apply-color(bs-slate-gray);
+            display    : inline-block;
+            font-weight: 500;
+            line-height: 1.5rem;
+            padding    : 25px 1rem;
+            transition : .3s ease-in-out;
 
             @include hover {
-                opacity: .5;
+                @include apply-color(bs-dark);
+            }
+        }
+    }
+
+    .social-list {
+        gap: 1.25rem;
+
+        a {
+            @include flex(center, center, 0);
+            @include apply-bg-color(bs-white);
+            border-radius: 50%;
+            height       : 32px;
+            text-align   : center;
+            transition   : .3s ease-in-out;
+            width        : 32px;
+
+            @include hover() {
+                @include apply-bg-color(bs-teal);
+
+                i {
+                    @include apply-color(bs-white);
+                    transform: scale(1);
+                }
             }
 
-            @include devices-small-screens {
-                border-bottom: 2px solid rgba($color: #000000, $alpha: 0.05);
-                margin       : 0 1rem;
-                padding      : 1rem 0;
+            i {
+                @include apply-color(bs-slate-gray);
+                font-size  : get-font-size(14);
+                font-weight: 900;
             }
+        }
+
+        @include devices-small-screens() {
+            display: none;
         }
     }
 }

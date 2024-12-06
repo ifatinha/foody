@@ -101,6 +101,7 @@ body {
 
 a {
   color: inherit;
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -123,9 +124,6 @@ h6 {
   display: flex;
   gap: 0.8rem;
   justify-content: space-between;
-}
-.social-list a {
-  display: inline-block;
 }
 .social-list a i {
   transition: 0.3s ease-in-out;
@@ -169,6 +167,8 @@ h6 {
     display: flex;
     gap: 1rem;
     justify-content: space-between;
+    position: absolute;
+    z-index: 9999;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
@@ -177,6 +177,8 @@ h6 {
     display: flex;
     gap: 1rem;
     justify-content: space-between;
+    position: absolute;
+    z-index: 9999;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
@@ -185,6 +187,8 @@ h6 {
     display: flex;
     gap: 1rem;
     justify-content: space-between;
+    position: absolute;
+    z-index: 9999;
   }
 }
 .top-bar__row {
@@ -203,6 +207,7 @@ h6 {
   display: flex;
   gap: 8px;
   justify-content: center;
+  color: #111111;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -226,13 +231,15 @@ h6 {
   }
 }
 .burger__button:hover {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .burger__button-visually {
   font-size: 1rem;
   font-weight: 600;
+  text-transform: uppercase;
 }
 .burger__button-bars {
+  background-color: #555555;
   display: block;
   height: 2px;
   position: relative;
@@ -240,7 +247,7 @@ h6 {
   width: 22px;
 }
 .burger__button-bars::after, .burger__button-bars::before {
-  background-color: currentColor;
+  background-color: #555555;
   content: "";
   display: block;
   height: 100%;
@@ -277,29 +284,56 @@ h6 {
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   visibility: hidden;
   width: 100%;
-  z-index: 1000;
+  z-index: 10000;
 }
 .modal::-webkit-scrollbar {
   width: 0;
 }
 .modal__close-button {
+  font-family: "Open Sans", sans-serif;
   align-items: center;
   display: flex;
-  gap: 4px;
+  gap: 14px;
   justify-content: center;
+  color: #ffffff;
   background: transparent;
   border: transparent;
   cursor: pointer;
-  font-size: 0.875rem;
-  min-height: 42px;
+  font-size: 1.125rem;
+  min-height: 50px;
+  min-width: 44px;
   position: absolute;
-  right: 20px;
-  top: 20px;
-  z-index: 9999999;
+  right: 1rem;
+  top: 1rem;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
 }
-.modal__close-button img {
-  height: 32px;
-  width: 32px;
+.modal__close-button:hover {
+  opacity: 0.5;
+}
+.modal__close-button:hover::after {
+  transform: rotate(225deg);
+}
+.modal__close-button:hover::before {
+  transform: rotate(135deg);
+}
+.modal__close-button::after, .modal__close-button::before {
+  background-color: #ffffff;
+  content: "";
+  height: 2px;
+  position: absolute;
+  right: 2px;
+  transition: 0.6s ease-in-out;
+  width: 22px;
+}
+.modal__close-button::after {
+  transform: rotate(45deg);
+}
+.modal__close-button::after:hover {
+  transform: translate(-50%, -50%) rotate(225deg);
+}
+.modal__close-button::before {
+  transform: rotate(-45deg);
 }
 
 .modal__active {
@@ -308,56 +342,20 @@ h6 {
   visibility: visible;
 }
 
-@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
-  .navbar__list {
-    background: #e7e7e7;
-    flex-direction: column;
-    height: 0px;
-    left: 0;
-    overflow-y: hidden;
-    position: absolute;
-    transition: 0.6s ease-in-out;
-    top: 67px;
-    visibility: hidden;
-    width: 100%;
-    z-index: 1000;
-  }
+.navbar {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
 }
-@media screen and (max-width: calc(768px - 1px)) {
-  .navbar__list {
-    background: #e7e7e7;
-    flex-direction: column;
-    height: 0px;
-    left: 0;
-    overflow-y: hidden;
-    position: absolute;
-    transition: 0.6s ease-in-out;
-    top: 67px;
-    visibility: hidden;
-    width: 100%;
-    z-index: 1000;
-  }
-}
-@media screen and (max-width: 480px) {
-  .navbar__list {
-    background: #e7e7e7;
-    flex-direction: column;
-    height: 0px;
-    left: 0;
-    overflow-y: hidden;
-    position: absolute;
-    transition: 0.6s ease-in-out;
-    top: 67px;
-    visibility: hidden;
-    width: 100%;
-    z-index: 1000;
-  }
+.navbar__list {
+  display: none;
 }
 @media screen and (min-width: 1920px) {
   .navbar__list {
     align-items: center;
     display: flex;
-    gap: 1rem;
+    gap: 0.4rem;
     justify-content: space-between;
   }
 }
@@ -365,7 +363,7 @@ h6 {
   .navbar__list {
     align-items: center;
     display: flex;
-    gap: 1rem;
+    gap: 0.4rem;
     justify-content: space-between;
   }
 }
@@ -373,37 +371,61 @@ h6 {
   .navbar__list {
     align-items: center;
     display: flex;
-    gap: 1rem;
+    gap: 0.4rem;
     justify-content: space-between;
   }
 }
 .navbar__list a {
-  display: block;
-  padding: 0.5rem;
-  transition: 0.5s ease-in-out;
+  color: #555555;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding: 25px 1rem;
+  transition: 0.3s ease-in-out;
 }
 .navbar__list a:hover {
-  opacity: 0.5;
+  color: #111111;
+}
+.navbar .social-list {
+  gap: 1.25rem;
+}
+.navbar .social-list a {
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  height: 32px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  width: 32px;
+}
+.navbar .social-list a:hover {
+  background-color: #20c997;
+}
+.navbar .social-list a:hover i {
+  color: #ffffff;
+  transform: scale(1);
+}
+.navbar .social-list a i {
+  color: #555555;
+  font-size: 0.875rem;
+  font-weight: 900;
 }
 @media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
-  .navbar__list a {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-    margin: 0 1rem;
-    padding: 1rem 0;
+  .navbar .social-list {
+    display: none;
   }
 }
 @media screen and (max-width: calc(768px - 1px)) {
-  .navbar__list a {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-    margin: 0 1rem;
-    padding: 1rem 0;
+  .navbar .social-list {
+    display: none;
   }
 }
 @media screen and (max-width: 480px) {
-  .navbar__list a {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-    margin: 0 1rem;
-    padding: 1rem 0;
+  .navbar .social-list {
+    display: none;
   }
 }
 
@@ -490,10 +512,43 @@ h6 {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  font-family: "Lora", serif;
-  background: #e7e7e7;
-  padding: 1rem 2%;
+  padding: 0 2%;
+  position: absolute;
   width: 100%;
+  z-index: 9999;
+}
+@media screen and (min-width: 1920px) {
+  .header {
+    top: 46px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .header {
+    top: 46px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .header {
+    top: 46px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 .header__brand {
   font-size: 1.5rem;

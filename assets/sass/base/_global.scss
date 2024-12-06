@@ -23,6 +23,7 @@ body {
 
 a {
     color          : inherit;
+    display        : inline-block;
     text-decoration: none;
 }
 
@@ -44,8 +45,6 @@ h6 {
     @include flex(center, space-between, .8rem);
 
     a {
-        display: inline-block;
-
         i {
             transition: .3s ease-in-out;
 

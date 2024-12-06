@@ -14,28 +14,61 @@
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     visibility: hidden;
     width     : 100%;
-    z-index   : 1000;
+    z-index   : 10000;
 
     &::-webkit-scrollbar {
         width: 0;
     }
 
     &__close-button {
-        @include flex(center, center, 4px);
-        @include apply-color("pure-white");
-        background: transparent;
-        border    : transparent;
-        cursor    : pointer;
-        font-size : get-font-size(14);
-        min-height: 42px;
-        position  : absolute;
-        right     : 20px;
-        top       : 20px;
-        z-index   : 9999999;
+        @include open-sans();
+        @include flex(center, center, 14px);
+        @include apply-color(bs-white);
+        background    : transparent;
+        border        : transparent;
+        cursor        : pointer;
+        font-size     : get-font-size(18);
+        min-height    : 50px;
+        min-width     : 44px;
+        position      : absolute;
+        right         : 1rem;
+        top           : 1rem;
+        text-transform: uppercase;
+        transition    : .5s ease-in-out;
 
-        img {
-            height: 32px;
-            width : 32px;
+        @include hover {
+            opacity: .5;
+
+            &::after {
+                transform: rotate(225deg);
+            }
+
+            &::before {
+                transform: rotate(135deg);
+            }
+        }
+
+        &::after,
+        &::before {
+            @include apply-bg-color(bs-white);
+            content   : "";
+            height    : 2px;
+            position  : absolute;
+            right     : 2px;
+            transition: .6s ease-in-out;
+            width     : 22px;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+
+            @include hover {
+                transform: translate(-50%, -50%) rotate(225deg);
+            }
+        }
+
+        &::before {
+            transform: rotate(-45deg);
         }
     }
 }

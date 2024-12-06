@@ -1,14 +1,23 @@
 @use "../base/colors"as *;
 @use "../base/typography"as *;
 @use "../base/mixins"as *;
+@use "../global/responsive"as *;
 
 .header {
-
     @include flex(center, space-between);
-    @include lora();
-    background: #e7e7e7;
-    padding   : 1rem 2%;
-    width     : 100%;
+    padding : 0 2%;
+    position: absolute;
+    width   : 100%;
+    z-index : 9999;
+
+    @include devices-large-screens() {
+        top: 46px;
+    }
+
+    @include devices-small-screens() {
+        padding-top   : 1rem;
+        padding-bottom: 1rem;
+    }
 
     &__brand {
         font-size     : get-font-size(24);
