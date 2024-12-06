@@ -2,20 +2,89 @@
 <html lang="en">
 
 <head>
+   <!-- Meta tags básicas -->
    <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description"
+      content="Foody é a sua loja online de produtos orgânicos e saudáveis. Encontre alimentos frescos e naturais para uma vida mais saudável e sustentável.">
+   <meta name="keywords"
+      content="produtos orgânicos, alimentos saudáveis, loja orgânica, vida saudável, alimentação sustentável">
+   <meta name="author" content="Fatima Ferreira">
+   <meta name="robots" content="index, follow">
+   <meta name="copyright" content="Foody. Todos os direitos reservados.">
 
+   <!-- Open Graph tags (para compartilhamento nas redes sociais) -->
+   <meta property="og:title" content="Foody - Produtos Orgânicos e Saudáveis">
+   <meta property="og:description"
+      content="Descubra os melhores produtos orgânicos e saudáveis para uma vida mais equilibrada e nutritiva. Encontre alimentos frescos e naturais para o seu dia a dia.">
+   <meta property="og:image" content="URL_da_imagem_de_preview.jpg">
+   <meta property="og:url" content="https://www.foody.com">
+   <meta property="og:type" content="website">
+
+   <!-- Twitter Card tags -->
+   <meta name="twitter:title" content="Foody - Produtos Orgânicos e Saudáveis">
+   <meta name="twitter:description"
+      content="Explore nossa seleção de produtos orgânicos e saudáveis para uma alimentação mais equilibrada.">
+   <meta name="twitter:image" content="URL_da_imagem_de_preview.jpg">
+   <meta name="twitter:card" content="summary_large_image">
+
+   <!-- Favicon -->
+   <link rel="icon" href="assets/images/icon.webp" type="image/x-icon">
+
+   <!-- arquivos de fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet">
+
+   <!-- css -->
    <link rel="stylesheet" href="assets/style/main.css">
+
+   <title>Foody - Produtos Orgânicos e Saudáveis</title>
 </head>
 
 <body>
-   <header class="header">
+
+   <div class="top-bar">
+      <div class="top-bar__row">
+         <span>
+            <i class="fa-solid fa-location-dot mx-1"></i>
+            123 Street, New York, USA
+         </span>
+         <span class="ms-4">
+            <i class="fa-solid fa-envelope mx-1"></i>
+            foody@contato.com
+         </span>
+      </div>
+      <div class="top-bar__row">
+         <span>Follow us: </span>
+         <ul class="social-list">
+            <li>
+               <a href="#" aria-label="Ir para o Facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
+               </a>
+            </li>
+            <li>
+               <a href="#" aria-label="Ir para o Twitter">
+                  <i class="fa-brands fa-x-twitter"></i>
+               </a>
+            </li>
+            <li>
+               <a href="#" aria-label="Ir para o Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+               </a>
+            </li>
+            <li>
+               <a href="#" aria-label="Ir para o Whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+
+   <!-- <header class="header">
       <div class="header__brand">
          <a href="#">Brand</a>
       </div>
@@ -33,10 +102,10 @@
             <span class="burger__button-bars" id="menuBar" aria-hidden="true"></span>
          </button>
       </nav>
-   </header>
+   </header> -->
 
    <!-- start navbar modal -->
-   <div class="modal menu__modal" id="menuModal">
+   <!-- <div class="modal menu__modal" id="menuModal">
       <button class="modal__close-button" id="menuModalCloseButton">
          <span>Fechar</span>
          <img src="assets/images/close.png" alt="Close Button">
@@ -65,7 +134,8 @@
             </li>
          </ul>
       </div>
-   </div>
+   </div> -->
+
    <!-- end navbar modal -->
    <script type="module" src="assets/script/script.js"></script>
    <script src="https://kit.fontawesome.com/4980d49b51.js" crossorigin="anonymous"></script>

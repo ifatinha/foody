@@ -2,12 +2,12 @@
 @use "sass:map";
 @use "../util/functions"as *;
 
-@mixin font-primary() {
-   font-family: "Poppins", sans-serif;
+@mixin lora() {
+   font-family: "Lora", serif;
 }
 
-@mixin font-secondary() {
-   font-family: Arial, Helvetica, sans-serif;
+@mixin open-sans() {
+   font-family: "Open Sans", sans-serif;
 }
 
 @function get-font-size($size) {

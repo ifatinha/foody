@@ -75,7 +75,7 @@
     }
 
     li {
-        @include font-primary();
+        @include lora();
         text-align: center;
         width     : 100%;
     }

@@ -1,8 +1,28 @@
 @use "sass:map";
 
 $theme-color: (
-    pure-black: #000000,
-    pure-white: #ffffff,
+    bs-indigo    : #6610f2,
+    bs-purple    : #6f42c1,
+    bs-pink      : #d63384,
+    bs-red       : #dc3545,
+    bs-orange    : #fd7e14,
+    bs-yellow    : #ffc107,
+    bs-green     : #198754,
+    bs-teal      : #20c997,
+    bs-cyan      : #0dcaf0,
+    bs-white     : #fff,
+    bs-gray      : #6c757d,
+    bs-gray-light: #999999,
+    bs-gray-dark : #343a40,
+    bs-slate-gray: #555555,
+    bs-primary   : #3CB815,
+    bs-secondary : #F65005,
+    bs-success   : #198754,
+    bs-info      : #0dcaf0,
+    bs-warning   : #ffc107,
+    bs-danger    : #dc3545,
+    bs-light     : #F7F8FC,
+    bs-dark      : #111111,
 );
 
 @mixin apply-color($key) {
