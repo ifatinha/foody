@@ -46,81 +46,83 @@
 
 <body>
 
-   <div class="top-bar">
-      <div class="top-bar__row">
-         <span>
-            <i class="fa-solid fa-location-dot mx-1"></i>
-            123 Street, New York, USA
-         </span>
-         <span class="ms-4">
-            <i class="fa-solid fa-envelope mx-1"></i>
-            foody@contato.com
-         </span>
+   <header class="header" id="header">
+      <div class="header__topbar" id="topBar">
+         <div class="header__topbar-row">
+            <span>
+               <i class="fa-solid fa-location-dot mx-1"></i>
+               123 Street, New York, USA
+            </span>
+            <span class="ms-4">
+               <i class="fa-solid fa-envelope mx-1"></i>
+               foody@contato.com
+            </span>
+         </div>
+         <div class="header__topbar-row">
+            <span>Follow us: </span>
+            <ul class="social-list">
+               <li>
+                  <a href="#" aria-label="Ir para o Facebook">
+                     <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" aria-label="Ir para o Twitter">
+                     <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" aria-label="Ir para o Instagram">
+                     <i class="fa-brands fa-instagram"></i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" aria-label="Ir para o Whatsapp">
+                     <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+               </li>
+            </ul>
+         </div>
       </div>
-      <div class="top-bar__row">
-         <span>Follow us: </span>
-         <ul class="social-list">
-            <li>
-               <a href="#" aria-label="Ir para o Facebook">
-                  <i class="fa-brands fa-facebook-f"></i>
-               </a>
-            </li>
-            <li>
-               <a href="#" aria-label="Ir para o Twitter">
-                  <i class="fa-brands fa-x-twitter"></i>
-               </a>
-            </li>
-            <li>
-               <a href="#" aria-label="Ir para o Instagram">
-                  <i class="fa-brands fa-instagram"></i>
-               </a>
-            </li>
-            <li>
-               <a href="#" aria-label="Ir para o Whatsapp">
-                  <i class="fa-brands fa-whatsapp"></i>
-               </a>
-            </li>
-         </ul>
-      </div>
-   </div>
 
-   <header class="header">
-      <a href="index.html">
-         <h1 class="brand">
-            F<span>oo</span>dy
-         </h1>
-      </a>
-      <nav class="navbar">
-         <ul class="navbar__list" id="navbarMenu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#products">Produtos</a></li>
-            <li><a href="#">Páginas</a></li>
-            <li><a href="/">Contato</a></li>
-         </ul>
-         <ul class="social-list">
-            <li>
-               <a href="#" aria-label="Search"
-                  class="d-flex align-items-center justify-content-center btn-sm-square ms-2 rounded-circle">
-                  <i class="fa-solid fa-magnifying-glass"></i></a>
-            </li>
-            <li>
-               <a href="#" aria-label="User"
-                  class="d-flex align-items-center justify-content-center btn-sm-square ms-2 rounded-circle">
-                  <i class="fa-regular fa-user"></i></a>
-            </li>
-            <li>
-               <a href="#" aria-label="Shopping"
-                  class="d-flex align-items-center justify-content-center btn-sm-square ms-2 rounded-circle">
-                  <i class="fa-solid fa-bag-shopping"></i></a>
-            </li>
-         </ul>
-         <button class="burger__button" type="button" id="navbarOpenButton" aria-label="Abrir Menu"
-            aria-expanded="false" aria-haspopup="menu" aria-controls="navbarMenu">
-            <span class="burger__button-visually">Menu</span>
-            <span class="burger__button-bars" id="menuBar" aria-hidden="true"></span>
-         </button>
-      </nav>
+      <div class="header__menu">
+         <a href="index.html">
+            <h1 class="brand">
+               F<span>oo</span>dy
+            </h1>
+         </a>
+         <nav class="navbar">
+            <ul class="navbar__list" id="navbarMenu">
+               <li><a href="#home">Home</a></li>
+               <li><a href="#about">Sobre</a></li>
+               <li><a href="#products">Produtos</a></li>
+               <li><a href="#">Páginas</a></li>
+               <li><a href="/">Contato</a></li>
+            </ul>
+            <ul class="social-list">
+               <li>
+                  <a href="#" aria-label="Search"
+                     class="d-flex align-items-center justify-content-center btn-sm-square ms-2 rounded-circle">
+                     <i class="fa-solid fa-magnifying-glass"></i></a>
+               </li>
+               <li>
+                  <a href="#" aria-label="User"
+                     class="d-flex align-items-center justify-content-center btn-sm-square ms-2 rounded-circle">
+                     <i class="fa-regular fa-user"></i></a>
+               </li>
+               <li>
+                  <a href="#" aria-label="Shopping"
+                     class="d-flex align-items-center justify-content-center btn-sm-square ms-2 rounded-circle">
+                     <i class="fa-solid fa-bag-shopping"></i></a>
+               </li>
+            </ul>
+            <button class="burger__button" type="button" id="navbarOpenButton" aria-label="Abrir Menu"
+               aria-expanded="false" aria-haspopup="menu" aria-controls="navbarMenu">
+               <span class="burger__button-visually">Menu</span>
+               <span class="burger__button-bars" id="menuBar" aria-hidden="true"></span>
+            </button>
+         </nav>
+      </div>
    </header>
 
    <!-- start navbar modal -->
@@ -153,8 +155,14 @@
          </li>
       </ul>
    </div>
-
    <!-- end navbar modal -->
+
+   <main style="height: 5000px; background: black;">
+
+   </main>
+
+   <!-- scripts -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    <script type="module" src="assets/script/script.js"></script>
    <script src="https://kit.fontawesome.com/4980d49b51.js" crossorigin="anonymous"></script>
 </body>

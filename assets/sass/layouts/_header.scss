@@ -2,26 +2,51 @@
 @use "../base/typography"as *;
 @use "../base/mixins"as *;
 @use "../global/responsive"as *;
+@use "../global/animations"as *;
 
 .header {
-    @include flex(center, space-between);
-    padding : 0 2%;
-    position: absolute;
-    width   : 100%;
-    z-index : 9999;
+    padding   : .5rem 2%;
+    position  : fixed;
+    transition: all .3s ease-in-out;
+    transform : translateY(0);
+    width     : 100%;
+    z-index   : 9999;
+
+    &__topbar {
+        border-bottom: 1px solid rgba(0, 0, 0, .07);
+        display      : none;
+        height       : 45px;
+        transition   : .3s ease-in-out;
+        width        : 100%;
+
+        @include devices-large-screens() {
+            @include flex(center, space-between);
+        }
+
+        &-row {
+            @include flex(center, space-between, 1.5rem);
+
+            span {
+                @include apply-color(bs-slate-gray);
+                font-size: get-font-size(14);
+            }
+        }
+    }
+
+    &__menu {
+        @include flex(center, space-between, 0);
+        @include fadeIn();
+    }
+}
+
+.header.stick {
+    @include fadeIn();
+    @include apply-bg-color(bs-white);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    visibility: visible;
 
     @include devices-large-screens() {
-        top: 46px;
-    }
-
-    @include devices-small-screens() {
-        padding-top   : 1rem;
-        padding-bottom: 1rem;
-    }
-
-    &__brand {
-        font-size     : get-font-size(24);
-        font-weight   : bold;
-        text-transform: uppercase;
+        transform     : translateY(-52px);
+        pointer-events: none;
     }
 }

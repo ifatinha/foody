@@ -1,9 +1,11 @@
 import { openModal, closeModal } from "./modules/menuModalController.js";
+import { stickMenu } from "./modules/stickMenu.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const functionsToCall = [
     { name: "openModal", func: openModal },
     { name: "closeModal", func: closeModal },
+    { name: "stickMenu", func: stickMenu },
   ];
 
   functionsToCall.forEach(({ name, func }) => {
