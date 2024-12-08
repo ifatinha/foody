@@ -1,8 +1,71 @@
 @use "../base/colors"as *;
 @use "../base/typography"as *;
+@use "../base/mixins"as *;
 @use "../global/responsive"as *;
 @use "../components/button"as *;
 
 .home__buttons {
     padding: 0 .8rem;
+}
+
+// section about
+
+.about__image {
+    @include flex(center, flex-end, 0px);
+    overflow: hidden;
+    padding : 2rem;
+    position: relative;
+
+    &::before {
+        background-image: repeating-radial-gradient(#fff, #eee 5px, transparent 5px, transparent 10px);
+        background-size : 20px 20px;
+        content         : "";
+        height          : 100%;
+        left            : -50%;
+        position        : absolute;
+        transform       : skew(20deg);
+        top             : 0;
+        width           : 100%;
+        z-index         : 1;
+    }
+
+    img {
+        object-fit: cover;
+        position  : relative;
+        z-index   : 2;
+
+        @include devices-large-screens() {
+            height: 564px;
+            width : 564px;
+        }
+    }
+}
+
+.about__content {
+
+    p,
+    ul {
+        @include apply-color(bs-slate-gray);
+    }
+
+    p {
+        margin-bottom: 24px;
+        max-width    : 600px;
+        width        : 100%;
+    }
+
+    ul {
+        li {
+            margin-bottom: 1rem;
+
+            i {
+                @include apply-color(bs-primary);
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 1rem;
+    }
 }

@@ -1,5 +1,37 @@
+@use "../base/colors"as *;
+@use "../base/typography"as *;
 @use "../base/mixins"as *;
+@use "../global/responsive"as *;
 
 .section {
     padding: 100px 1%;
+
+    &__row {
+        @include grid(1fr);
+
+        @include devices-large-screens() {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__desc {
+        align-self: center;
+        padding   : 0 24px;
+
+        h1 {
+            @include apply-color(bs-dark);
+            font-size    : get-font-size(32);
+            line-height  : 40px;
+            margin-bottom: 24px;
+
+            @include devices-large-screens() {
+                font-size  : get-font-size(48);
+                line-height: 58px;
+            }
+        }
+    }
+
+    &__image {
+        padding: 0 24px;
+    }
 }

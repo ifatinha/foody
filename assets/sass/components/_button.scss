@@ -88,8 +88,8 @@
 }
 
 .btn-green {
-    @include apply-bg-color(bs-success);
-    border-color: get-color(bs-success);
+    @include apply-bg-color(bs-primary);
+    border-color: get-color(bs-primary);
 }
 
 .btn-orange {
