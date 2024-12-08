@@ -4,7 +4,24 @@
 @use "../global/responsive"as *;
 
 .section {
-    padding: 100px 1%;
+    padding: 100px 2%;
+
+    &__title {
+        @include apply-color(bs-dark);
+        font-size    : get-font-size(34);
+        line-height  : 40px;
+        margin-bottom: 24px;
+
+        @include devices-large-screens() {
+            font-size  : get-font-size(48);
+            line-height: 58px;
+        }
+    }
+
+    &__container {
+        max-width: 500px;
+        width    : 100%;
+    }
 
     &__row {
         @include grid(1fr);
@@ -17,21 +34,36 @@
     &__desc {
         align-self: center;
         padding   : 0 24px;
-
-        h1 {
-            @include apply-color(bs-dark);
-            font-size    : get-font-size(32);
-            line-height  : 40px;
-            margin-bottom: 24px;
-
-            @include devices-large-screens() {
-                font-size  : get-font-size(48);
-                line-height: 58px;
-            }
-        }
     }
 
     &__image {
         padding: 0 24px;
+    }
+
+    &__header {
+        position   : relative;
+        padding-top: 25px;
+
+        &::after,
+        &::before {
+            content  : "";
+            height   : 2px;
+            left     : 50%;
+            position : absolute;
+            transform: translateX(-50%);
+
+        }
+
+        &::before {
+            @include apply-bg-color(bs-primary);
+            top  : 0;
+            width: 60px;
+        }
+
+        &::after {
+            @include apply-bg-color(bs-secondary);
+            top  : 10px;
+            width: 90px;
+        }
     }
 }

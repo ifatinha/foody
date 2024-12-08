@@ -12,9 +12,10 @@
 
 .about__image {
     @include flex(center, flex-end, 0px);
-    overflow: hidden;
-    padding : 2rem;
-    position: relative;
+    justify-self: self-end;
+    overflow    : hidden;
+    padding     : 2rem;
+    position    : relative;
 
     &::before {
         background-image: repeating-radial-gradient(#fff, #eee 5px, transparent 5px, transparent 10px);
@@ -68,4 +69,186 @@
     .btn {
         margin-top: 1rem;
     }
+}
+
+// section details
+.details {
+    @include bg-img("../images/bg.png");
+    background-color: get-color(bs-light) !important;
+    background-size : contain;
+
+    .section__container {
+        margin    : 0 auto 4rem;
+        text-align: center;
+    }
+}
+
+.details__cards {
+    @include grid(1fr, 1.5rem);
+
+    @include devices-large-screens() {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include devices(t) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card__item {
+    @include apply-bg-color(bs-white);
+    @include flex(center, center, 0px);
+    flex-direction: column;
+    padding       : 48px;
+    text-align    : center;
+
+    img {
+        height       : 90px;
+        margin-bottom: 1.5rem;
+        width        : 90px;
+    }
+
+    h2 {
+        font-size    : get-font-size(24);
+        line-height  : 30px;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        @include apply-color(bs-primary);
+        border-color: get-color(bs-primary);
+        border-width: 1.6px;
+        padding     : 8px 24px;
+
+        @include hover() {
+            @include apply-color(bs-white);
+            @include apply-bg-color(bs-primary);
+        }
+    }
+}
+
+//section products
+.products {
+
+    .section__header {
+
+        &::before,
+        &::after {
+            left     : 0;
+            transform: translateX(0);
+        }
+    }
+}
+
+.products__filter {
+    @include flex(center, center, 1rem);
+    flex-wrap : wrap;
+    margin-top: 1.5rem;
+
+    @include devices-large-screens() {
+        justify-content: flex-end;
+    }
+
+    @include devices(t) {
+        justify-content: flex-end;
+    }
+}
+
+.products__list {
+    @include grid(1fr, 1.5rem);
+    margin: 3rem 0;
+
+    @include devices-large-screens() {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include devices(t) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.product-card {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    position  : relative;
+    width     : 100%;
+}
+
+.product-badge {
+    @include apply-bg-color(bs-secondary);
+    @include apply-color(bs-white);
+    left    : .8rem;
+    padding : 4px 16px;
+    position: absolute;
+    top     : .8rem;
+    z-index : 999;
+}
+
+.product-image {
+    overflow: hidden;
+
+    img {
+        height    : 100%;
+        object-fit: cover;
+        transition: .5s ease-in-out;
+
+        @include hover() {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.product-info {
+    padding   : 24px;
+    text-align: center;
+
+    h3 {
+        @include apply-color(bs-dark);
+        font-size    : get-font-size(20);
+        font-weight  : 600;
+        line-height  : 24px;
+        margin-bottom: 8px;
+    }
+
+    p {
+        @include apply-color(bs-primary);
+
+        span {
+            @include apply-color(bs-slate-gray);
+            margin-left    : 4px;
+            text-decoration: line-through;
+        }
+    }
+}
+
+.product-actions {
+    @include flex(center, center, 0);
+    border-top: 1px solid #dee2e6;
+
+    a {
+        flex-grow : 1;
+        font-size : get-font-size(14);
+        text-align: center;
+        transition: .3s ease-in-out;
+        padding   : .5rem 0;
+
+        @include hover() {
+            @include apply-color(bs-primary);
+        }
+
+        &:first-of-type {
+            border-right: 1px solid #dee2e6;
+        }
+
+        i {
+            @include apply-color(bs-primary);
+        }
+    }
+}
+
+.product__button {
+    text-align: center;
 }

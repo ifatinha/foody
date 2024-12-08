@@ -29,6 +29,13 @@
     gap                  : $gap;
 }
 
+@mixin bg-img($url) {
+    background         : url($url);
+    background-repeat  : no-repeat;
+    background-position: center center;
+    background-size    : cover;
+}
+
 @mixin linear-gradient() {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }

@@ -129,3 +129,18 @@
     opacity  : 1;
     transform: translateY(0);
 }
+
+.btn-square {
+    @include apply-color(bs-dark);
+    border     : 1.6px solid get-color(bs-primary);
+    font-weight: 500;
+    line-height: 24px;
+    padding    : 6px 12px;
+    text-align : center;
+    transition : .3s ease-in-out;
+
+    @include hover() {
+        @include apply-bg-color(bs-primary);
+        @include apply-color(bs-white);
+    }
+}

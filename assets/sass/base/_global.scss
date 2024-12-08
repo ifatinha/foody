@@ -14,7 +14,7 @@ body {
 }
 
 body {
-    @include apply-color(bs-gray);
+    @include apply-color(bs-slate-gray);
     @include open-sans();
     font-size  : 1em;
     font-weight: 400;
