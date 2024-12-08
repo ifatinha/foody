@@ -31,12 +31,16 @@
             z-index : 9999;
             width   : 100%;
 
+            @include devices-small-screens() {
+                text-align: center;
+            }
+
             h1 {
                 @include apply-color(bs-dark);
-                font-size       : get-font-size(30);
-                font-weight     : 700;
-                margin-bottom   : 2rem;
-                padding         : 0 .8rem;
+                font-size    : get-font-size(30);
+                font-weight  : 700;
+                margin-bottom: 2rem;
+                padding      : 0 .8rem;
 
                 @include devices-large-screens() {
                     max-width: 680px;

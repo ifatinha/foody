@@ -71,3 +71,28 @@
         }
     }
 }
+
+.btn {
+    @include apply-color(bs-white);
+    border-radius: 800px;
+    border       : 0.8px solid transparent;
+    font-weight  : 500;
+    line-height  : 24px;
+    padding      : 14px 3rem;
+    text-align   : center;
+    transition   : .3s ease-in-out;
+
+    @include hover() {
+        //opacity: .8;
+    }
+}
+
+.btn-green {
+    @include apply-bg-color(bs-success);
+    border-color: get-color(bs-success);
+}
+
+.btn-orange {
+    @include apply-bg-color(bs-secondary);
+    border-color: get-color(bs-secondary);
+}

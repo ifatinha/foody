@@ -227,6 +227,26 @@ h6 {
   transform: rotate(-45deg);
 }
 
+.btn {
+  color: #ffffff;
+  border-radius: 800px;
+  border: 0.8px solid transparent;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 14px 3rem;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+.btn-green {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+.btn-orange {
+  background-color: #F65005;
+  border-color: #F65005;
+}
+
 .modal {
   align-items: center;
   display: flex;
@@ -477,6 +497,21 @@ h6 {
   position: absolute;
   z-index: 9999;
   width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .home__carousel .swiper-slide .swiper__caption {
+    text-align: center;
+  }
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .home__carousel .swiper-slide .swiper__caption {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home__carousel .swiper-slide .swiper__caption {
+    text-align: center;
+  }
 }
 .home__carousel .swiper-slide .swiper__caption h1 {
   color: #111111;
