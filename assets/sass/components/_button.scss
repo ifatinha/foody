@@ -83,7 +83,7 @@
     transition   : .3s ease-in-out;
 
     @include hover() {
-        //opacity: .8;
+        opacity: .8;
     }
 }
 
@@ -95,4 +95,37 @@
 .btn-orange {
     @include apply-bg-color(bs-secondary);
     border-color: get-color(bs-secondary);
+}
+
+.btn-round {
+    @include apply-bg-color(bs-primary);
+    @include flex(center, center, 0);
+    border       : 0.8px solid get-color(bs-primary);
+    border-radius: 50%;
+    bottom       : 2rem;
+    cursor       : pointer;
+    height       : 48px;
+    line-height  : 2rem;
+    opacity      : 0;
+    position     : fixed;
+    transition   : .5s ease-in-out;
+    transform    : translateY(30px);
+    right        : 2rem;
+    width        : 48px;
+    z-index      : 9999;
+
+    @include hover() {
+        @include apply-bg-color(bs-success);
+        border-color: get-color(bs-success);
+    }
+
+    i {
+        @include apply-color(bs-white);
+        font-size: get-font-size(18);
+    }
+}
+
+.btn-round.visible {
+    opacity  : 1;
+    transform: translateY(0);
 }

@@ -23,6 +23,12 @@
     justify-content: $justify-content;
 }
 
+@mixin grid($columns, $gap: 1rem) {
+    display              : grid;
+    grid-template-columns: $columns;
+    gap                  : $gap;
+}
+
 @mixin linear-gradient() {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }

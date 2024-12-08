@@ -237,6 +237,10 @@ h6 {
   text-align: center;
   transition: 0.3s ease-in-out;
 }
+.btn:hover {
+  opacity: 0.8;
+}
+
 .btn-green {
   background-color: #198754;
   border-color: #198754;
@@ -245,6 +249,40 @@ h6 {
 .btn-orange {
   background-color: #F65005;
   border-color: #F65005;
+}
+
+.btn-round {
+  background-color: #3CB815;
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  border: 0.8px solid #3CB815;
+  border-radius: 50%;
+  bottom: 2rem;
+  cursor: pointer;
+  height: 48px;
+  line-height: 2rem;
+  opacity: 0;
+  position: fixed;
+  transition: 0.5s ease-in-out;
+  transform: translateY(30px);
+  right: 2rem;
+  width: 48px;
+  z-index: 9999;
+}
+.btn-round:hover {
+  background-color: #198754;
+  border-color: #198754;
+}
+.btn-round i {
+  color: #ffffff;
+  font-size: 1.125rem;
+}
+
+.btn-round.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .modal {
@@ -700,6 +738,10 @@ h6 {
     transform: translateY(-52px);
     pointer-events: none;
   }
+}
+
+.section {
+  padding: 100px 1%;
 }
 
 .home__buttons {
