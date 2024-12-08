@@ -1,0 +1,8 @@
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+@use "../global/responsive"as *;
+@use "../components/button"as *;
+
+.home__buttons {
+    padding: 0 .8rem;
+}

@@ -38,6 +38,9 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet">
 
+   <!-- swiperjs -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
    <!-- css -->
    <link rel="stylesheet" href="assets/style/main.css">
 
@@ -157,14 +160,48 @@
    </div>
    <!-- end navbar modal -->
 
-   <main style="height: 5000px; background: black;">
-
+   <main>
+      <!-- slide principal -->
+      <div class="home__carousel">
+         <div class="swiper" id="carouselHome">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <img src="assets/images/carousel-1.jpg" alt="Food">
+                  <div class="swiper__caption">
+                     <div class="container">
+                        <h1>O poder da natureza em sua mesa.</h1>
+                        <div class="home__buttons">
+                           <a href="#">Produtos</a>
+                           <a href="#">Serviços</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-slide">
+                  <img src="assets/images/carousel-2.jpg" alt="Food">
+                  <div class="swiper__caption">
+                     <div class="container">
+                        <h1>Alimentos que nutrem corpo e alma.</h1>
+                        <div class="home__buttons">
+                           <a href="#">Produtos</a>
+                           <a href="#">Serviços</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-button-next" id="nextSlideHome"></div>
+            <div class="swiper-button-prev" id="prevSlideHome"></div>
+         </div>
+      </div>
    </main>
 
    <!-- scripts -->
+   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    <script type="module" src="assets/script/script.js"></script>
    <script src="https://kit.fontawesome.com/4980d49b51.js" crossorigin="anonymous"></script>
+   <script type="module" src="assets/script/modules/swiper.js"></script>
 </body>
 
 </html>

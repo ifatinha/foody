@@ -1,0 +1,74 @@
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+@use "../base/mixins"as *;
+@use "../global/responsive"as *;
+
+.home__carousel {
+
+    .swiper {
+        width : 100%;
+        height: 80vh;
+
+        @include devices-large-screens() {
+            height: 120vh;
+        }
+    }
+
+    .swiper-slide {
+        @include flex(center, center);
+        position: relative;
+        width   : 100%;
+
+        img {
+            height    : 100%;
+            object-fit: cover;
+            position  : absolute;
+            z-index   : -1;
+        }
+
+        .swiper__caption {
+            position: absolute;
+            z-index : 9999;
+            width   : 100%;
+
+            h1 {
+                @include apply-color(bs-dark);
+                font-size       : get-font-size(30);
+                font-weight     : 700;
+                margin-bottom   : 2rem;
+                padding         : 0 .8rem;
+
+                @include devices-large-screens() {
+                    max-width: 680px;
+                }
+
+                @include devices-large-screens() {
+                    font-size: get-font-size(60);
+                }
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        @include apply-bg-color(bs-primary);
+        border-radius: 50%;
+        height       : 3rem;
+        transition   : all .3s ease-in-out;
+        width        : 3rem;
+
+        @include hover() {
+            opacity: .5;
+        }
+
+        @include devices-small-screens() {
+            top: 80%;
+        }
+
+        &::after {
+            @include apply-color(bs-white);
+            font-size: get-font-size(18);
+        }
+    }
+
+}

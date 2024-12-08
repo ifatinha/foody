@@ -1,6 +1,6 @@
 export const stickMenu = () => {
   $(document).ready(function () {
-    const handleScrol = () => {
+    const handleScroll = () => {
       $(window).on("scroll", function () {
         let scrollTimeout;
         clearTimeout(scrollTimeout);
@@ -15,6 +15,6 @@ export const stickMenu = () => {
       });
     };
 
-    handleScrol();
+    handleScroll();
   });
 };
