@@ -286,7 +286,9 @@ h6 {
 
 .btn-square {
   color: #111111;
-  border: 1.6px solid #3CB815;
+  background: transparent;
+  border: 2px solid #3CB815;
+  cursor: pointer;
   font-weight: 500;
   line-height: 24px;
   padding: 6px 12px;
@@ -294,6 +296,11 @@ h6 {
   transition: 0.3s ease-in-out;
 }
 .btn-square:hover {
+  background-color: #3CB815;
+  color: #ffffff;
+}
+
+.btn-square.activated {
   background-color: #3CB815;
   color: #ffffff;
 }
@@ -737,19 +744,16 @@ h6 {
 @media screen and (min-width: 1920px) {
   .header.stick {
     transform: translateY(-52px);
-    pointer-events: none;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
   .header.stick {
     transform: translateY(-52px);
-    pointer-events: none;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
   .header.stick {
     transform: translateY(-52px);
-    pointer-events: none;
   }
 }
 
@@ -1039,8 +1043,16 @@ h6 {
 
 .product-card {
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s ease-in-out;
   position: relative;
   width: 100%;
+}
+
+.product-card.activated {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .product-badge {

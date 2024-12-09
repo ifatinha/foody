@@ -173,8 +173,17 @@
 
 .product-card {
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    opacity   : 0;
+    transform : translateY(20px);
+    transition: .5s ease-in-out;
     position  : relative;
     width     : 100%;
+}
+
+
+.product-card.activated {
+    opacity  : 1;
+    transform: translateY(0);
 }
 
 .product-badge {

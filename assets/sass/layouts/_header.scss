@@ -47,6 +47,5 @@
 
     @include devices-large-screens() {
         transform     : translateY(-52px);
-        pointer-events: none;
     }
 }

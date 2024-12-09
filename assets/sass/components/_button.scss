@@ -132,7 +132,9 @@
 
 .btn-square {
     @include apply-color(bs-dark);
-    border     : 1.6px solid get-color(bs-primary);
+    background : transparent;
+    border     : 2px solid get-color(bs-primary);
+    cursor     : pointer;
     font-weight: 500;
     line-height: 24px;
     padding    : 6px 12px;
@@ -143,4 +145,9 @@
         @include apply-bg-color(bs-primary);
         @include apply-color(bs-white);
     }
+}
+
+.btn-square.activated {
+    @include apply-bg-color(bs-primary);
+    @include apply-color(bs-white);
 }

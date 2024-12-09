@@ -1,6 +1,7 @@
 import { openModal, closeModal } from "./modules/menuModalController.js";
 import { stickMenu } from "./modules/stickMenu.js";
 import { scrollToTop } from "./modules/scrollToTop.js";
+import { filterProducts } from "./modules/filterProducts.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const functionsToCall = [
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "closeModal", func: closeModal },
     { name: "stickMenu", func: stickMenu },
     { name: "scrollToTop", func: scrollToTop },
+    { name: "filterProducts", func: filterProducts },
   ];
 
   functionsToCall.forEach(({ name, func }) => {
