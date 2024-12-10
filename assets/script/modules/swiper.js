@@ -13,3 +13,17 @@ const slideHome = new Swiper("#carouselHome", {
     prevEl: "#prevSlideHome",
   },
 });
+
+const reviewSwiper = new Swiper("#reviewSwiper", {
+  spaceBetween: 16,
+  slidesPerView: 3,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  navigation: {
+    nextEl: "#nextReview",
+    prevEl: "#prevReview",
+  },
+});

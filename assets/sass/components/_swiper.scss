@@ -76,3 +76,17 @@
     }
 
 }
+
+.review__swiper {
+    background: orange;
+
+    .swiper-slide {
+        @include apply-bg-color(bs-white);
+        padding: 48px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        bottom: 0;
+    }
+}

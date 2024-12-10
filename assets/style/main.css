@@ -644,6 +644,18 @@ h6 {
   font-size: 1.125rem;
 }
 
+.review__swiper {
+  background: orange;
+}
+.review__swiper .swiper-slide {
+  background-color: #ffffff;
+  padding: 48px;
+}
+.review__swiper .swiper-button-next,
+.review__swiper .swiper-button-prev {
+  bottom: 0;
+}
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -1213,6 +1225,7 @@ h6 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-color: #F7F8FC !important;
 }
 .review .section__container {
   max-width: 600px;

@@ -312,6 +312,7 @@
 //Review
 .review {
     @include bg-img("../images/bg.png");
+    background-color: #F7F8FC !important;
 
     .section__container {
         max-width : 600px;
