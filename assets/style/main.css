@@ -1127,4 +1127,97 @@ h6 {
   text-align: center;
 }
 
+.firm {
+  background: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #ffffff;
+  background-color: #3CB815 !important;
+  padding: 6rem 2%;
+}
+.firm__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media screen and (min-width: 1920px) {
+  .firm__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .firm__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .firm__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .firm__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.firm__row {
+  align-self: center;
+}
+.firm__row h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 58px;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 1920px) {
+  .firm__row h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .firm__row h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .firm__row h1 {
+    font-size: 3rem;
+  }
+}
+.firm__row:nth-child(2) {
+  justify-self: start;
+}
+@media screen and (min-width: 1920px) {
+  .firm__row:nth-child(2) {
+    align-self: center;
+    justify-self: end;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .firm__row:nth-child(2) {
+    align-self: center;
+    justify-self: end;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .firm__row:nth-child(2) {
+    align-self: center;
+    justify-self: end;
+  }
+}
+
+.review {
+  background: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.review .section__container {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
 /*# sourceMappingURL=main.css.map */
