@@ -21,7 +21,10 @@ const reviewSwiper = new Swiper("#reviewSwiper", {
     delay: 5000,
     disableOnInteraction: false,
   },
-  loop: true,
+  loop: false,
+  pagination: {
+    clickable: true,
+  },
   navigation: {
     nextEl: "#nextReview",
     prevEl: "#prevReview",
