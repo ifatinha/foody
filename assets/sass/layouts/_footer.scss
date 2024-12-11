@@ -1,0 +1,112 @@
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+@use "../base/mixins"as *;
+@use "../global/responsive"as *;
+
+.footer {
+    @include apply-bg-color(bs-dark);
+    @include apply-color(bs-gray-light);
+    padding: 3rem 1%;
+
+    &__container {
+        @include grid(1fr, 1rem);
+
+        @include devices-large-screens() {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include devices(t) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__column {
+        padding: 0 4px;
+
+        .social-list {
+            gap            : .5rem;
+            justify-content: start;
+
+            a {
+                @include flex(center, center, 0);
+                border       : 1px solid get-color(bs-light);
+                border-radius: 50%;
+                height       : 38px;
+                line-height  : 24px;
+                transition   : .5s ease-in-out;
+                width        : 38px;
+
+                @include hover() {
+                    @include apply-bg-color(bs-light);
+
+                    i {
+                        @include apply-color(bs-dark);
+                        transform: scale(1);
+                    }
+                }
+
+                i {
+                    @include apply-color(bs-white);
+                }
+            }
+        }
+
+        .brand {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__titles {
+        color        : get-color(bs-light) !important;
+        font-size    : get-font-size(22);
+        font-weight  : 600;
+        line-height  : 28px;
+        margin-bottom: 24px;
+    }
+
+    &__description {
+        margin-bottom: 1rem;
+    }
+
+    &__list {
+        display       : flex;
+        flex-direction: column;
+        gap           : .8rem;
+
+        li {
+            width: 100%;
+        }
+
+        span {
+            i {
+                margin-right: .6rem;
+            }
+        }
+    }
+
+    #quickLinks {
+
+        li {
+            align-items: center;
+            display    : flex;
+            gap        : .4rem;
+        }
+
+        a {
+            transition: .4s ease-in-out;
+            width     : 100%;
+
+            @include hover() {
+                @include apply-color(bs-white);
+                padding-left: .4rem;
+            }
+        }
+    }
+
+    &__copyright {
+        border-top   : 1px solid rgba(256, 256, 256, .1);
+        font-size    : get-font-size(14);
+        margin-top: 3rem;
+        padding      : 32px 0;
+    }
+}

@@ -1,0 +1,32 @@
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+
+.form {
+    width: 100%;
+
+    &__item {
+        margin-bottom: .5rem;
+        width        : 100%;
+
+        input {
+            @include apply-color(bs-slate-gray);
+            background : transparent;
+            border     : 1px solid #ced4da;
+            display    : block;
+            font-size  : get-font-size(16);
+            font-weight: 400;
+            line-height: 1.5rem;
+            outline    : none;
+            padding    : .6rem 1.5rem;
+            width      : 100%;
+        }
+
+        .btn {
+            border-radius: 0;
+            border-width : 1px;
+            cursor       : pointer;
+            font-size    : get-font-size(16);
+            padding      : 8px 12px;
+        }
+    }
+}
