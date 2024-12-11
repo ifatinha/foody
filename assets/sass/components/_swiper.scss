@@ -78,15 +78,67 @@
 }
 
 .review__swiper {
-    background: orange;
+    height    : 100%;
+    width     : 100%;
+
+    .swiper {
+        height: 100%;
+        width : 100%;
+    }
+
+    .swiper-wrapper {
+        padding: 2rem 0px 5rem;
+    }
 
     .swiper-slide {
         @include apply-bg-color(bs-white);
-        padding: 48px;
+        height: 240px;
     }
 
     .swiper-button-next,
     .swiper-button-prev {
-        bottom: 0;
+        @include apply-color(bs-dark);
+        border       : 2px solid get-color(bs-primary);
+        border-radius: 50%;
+        height       : 50px;
+        margin-top   : -1.8rem;
+        top          : 90%;
+        transition   : .5s ease-in-out;
+        width        : 50px;
+
+        @include hover() {
+            @include apply-bg-color(bs-primary);
+
+            &::after {
+                @include apply-color(bs-white);
+            }
+        }
+
+        &::after {
+            font-size : get-font-size(18);
+            transition: .5s ease-in-out;
+        }
+    }
+
+    #nextReview {
+        margin-right: 12px;
+        right       : 50%;
+    }
+
+    #prevReview {
+        left: 50%;
+    }
+
+    .swiper-slide-active {
+        @include apply-bg-color(bs-primary);
+        @include apply-color(bs-white);
+
+        i {
+            color: #f65005 !important;
+        }
+
+        h5 {
+            color: #ffffff !important;
+        }
     }
 }
